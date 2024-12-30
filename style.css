@@ -1,0 +1,97 @@
+.container {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    color: #776e65;
+}
+
+.score {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #776e65;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    background-color: #bbada0;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 20px 0;
+    touch-action: none;
+    user-select: none;
+    cursor: grab;
+}
+
+.grid:active {
+    cursor: grabbing;
+}
+
+.cell {
+    width: 85px;
+    height: 85px;
+    background-color: rgba(238, 228, 218, 0.35);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #776e65;
+    transition: all 0.15s ease;
+}
+
+.cell[data-value="2"] { background-color: #eee4da; }
+.cell[data-value="4"] { background-color: #ede0c8; }
+.cell[data-value="8"] { background-color: #f2b179; color: #f9f6f2; }
+.cell[data-value="16"] { background-color: #f59563; color: #f9f6f2; }
+.cell[data-value="32"] { background-color: #f67c5f; color: #f9f6f2; }
+.cell[data-value="64"] { background-color: #f65e3b; color: #f9f6f2; }
+.cell[data-value="128"] { 
+    background-color: #edcf72; 
+    color: #f9f6f2;
+    font-size: 32px;
+}
+.cell[data-value="256"] { 
+    background-color: #edcc61; 
+    color: #f9f6f2;
+    font-size: 32px;
+}
+.cell[data-value="512"] { 
+    background-color: #edc850; 
+    color: #f9f6f2;
+    font-size: 32px;
+}
+.cell[data-value="1024"] { 
+    background-color: #edc53f; 
+    color: #f9f6f2;
+    font-size: 28px;
+}
+.cell[data-value="2048"] { 
+    background-color: #edc22e; 
+    color: #f9f6f2;
+    font-size: 28px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #8f7a66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #9f8b77;
+} 
